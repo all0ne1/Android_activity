@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">MultiActivity</string>
+    <string name="button">Button</string>
+    <string name="TextView">Hello World!</string>
+    <string name="send">Send</string>
+    <string name="plaintofill">Example</string>
+</resources>
