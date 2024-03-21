@@ -17,3 +17,6 @@ rootProject.name = "Lesson2"
 include(":app")
 include(":activitylifestyle")
 include(":multiactivity")
+include(":IntentFilter")
+include(":toastapp")
+include(":notificationapp")
