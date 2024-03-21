@@ -1,0 +1,27 @@
+R_DEF: Internal format may change without notice
+local
+color black
+color white
+drawable ic_launcher_background
+drawable ic_launcher_foreground
+id button
+id button10
+id button2
+id button3
+id button4
+id button5
+id button6
+id button7
+id button8
+id button9
+id checkBox
+id imageButton
+id textView
+layout activity_main
+layout linear_layout
+layout table_layout
+mipmap ic_launcher
+mipmap ic_launcher_round
+string app_name
+style Base.Theme.Pr1
+style Theme.Pr1
