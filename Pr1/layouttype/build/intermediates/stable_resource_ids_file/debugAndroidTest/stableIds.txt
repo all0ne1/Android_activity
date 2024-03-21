@@ -1,2 +1,0 @@
-ru.mirea.andaev.layouttype.test:style/WhiteBackgroundTheme = 0x7f010001
-ru.mirea.andaev.layouttype.test:style/WhiteBackgroundDialogTheme = 0x7f010000
