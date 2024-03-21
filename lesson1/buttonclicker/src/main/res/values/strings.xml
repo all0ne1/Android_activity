@@ -1,6 +1,0 @@
-<resources>
-    <string name="app_name">ButtonClicker</string>
-    <string name="WhoAmI">Who am I?</string>
-    <string name="ItIsNotMe">It\'s not me</string>
-    <string name="ItsMe">Its me!</string>
-</resources>
