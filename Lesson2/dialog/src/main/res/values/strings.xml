@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Dialog</string>
+    <string name="button">Show dialog</string>
+    <string name="TimeDialogButton">Time dialog</string>
+    <string name="DateDialogButton">Date dialog</string>
+    <string name="ProgressDialogButton">Progress dialog</string>
+</resources>
