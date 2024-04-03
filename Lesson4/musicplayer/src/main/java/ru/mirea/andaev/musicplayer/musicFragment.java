@@ -75,28 +75,36 @@ public class musicFragment extends Fragment {
             Toast.makeText(getContext(), t.getMessage(), Toast.LENGTH_SHORT).show();
         }
     }
-    public void play(View view){
-        mPlayer.start();
-        binding.playButton.setEnabled(false);
-        binding.pauseButton.setEnabled(true);
-        binding.stopButton.setEnabled(true);
-    }
-    public void pause(View view){
-        mPlayer.pause();
-        binding.playButton.setEnabled(true);
-        binding.pauseButton.setEnabled(false);
-        binding.stopButton.setEnabled(true);
-    }
-    public void stop(View view){
-        stopPlay();
-    }
-
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         binding = FragmentMusicBinding.inflate(inflater,container,false);
         View root = binding.getRoot();
+        binding.playButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mPlayer.start();
+                binding.playButton.setEnabled(false);
+                binding.pauseButton.setEnabled(true);
+                binding.stopButton.setEnabled(true);
+            }
+        });
+        binding.pauseButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mPlayer.pause();
+                binding.playButton.setEnabled(true);
+                binding.pauseButton.setEnabled(false);
+                binding.stopButton.setEnabled(true);
+            }
+        });
+        binding.stopButton.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                stopPlay();
+            }
+        });
         // Inflate the layout for this fragment
         return root;
     }
