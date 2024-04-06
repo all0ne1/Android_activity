@@ -79,6 +79,7 @@ public class musicFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+        mPlayer = MediaPlayer.create(getContext(),R.raw.music);
         binding = FragmentMusicBinding.inflate(inflater,container,false);
         View root = binding.getRoot();
         binding.playButton.setOnClickListener(new View.OnClickListener() {
