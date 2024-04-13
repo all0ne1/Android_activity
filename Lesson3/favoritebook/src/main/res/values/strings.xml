@@ -1,8 +1,0 @@
-<resources>
-    <string name="app_name">FavoriteBook</string>
-    <string name="bookName">Тут появится название вашей любимой книги! \n
-    Название Вашей любимой книги: </string>
-    <string name="DataInput">Открыть экран ввода данных</string>
-    <string name="favoriteBookHint">Введите название Вашей любимой книги</string>
-    <string name="returnButton">Вернутся на первый экран</string>
-</resources>
