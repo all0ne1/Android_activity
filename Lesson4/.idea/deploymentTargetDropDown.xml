@@ -8,6 +8,9 @@
       <entry key="musicplayer">
         <State />
       </entry>
+      <entry key="thread">
+        <State />
+      </entry>
     </value>
   </component>
 </project>
