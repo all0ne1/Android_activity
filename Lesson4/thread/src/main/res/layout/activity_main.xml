@@ -17,18 +17,20 @@
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.287" />
+        app:layout_constraintVertical_bias="0.231" />
 
     <Button
         android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="4dp"
-        android:text="Button"
+        android:text="Calculate"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/inputLessons"
+        app:layout_constraintEnd_toEndOf="@+id/calculation_res"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/inputLessons"
-        app:layout_constraintTop_toBottomOf="@+id/inputLessons" />
+        app:layout_constraintTop_toBottomOf="@+id/inputLessons"
+        app:layout_constraintVertical_bias="0.585" />
 
     <EditText
         android:id="@+id/inputDays"
@@ -56,5 +58,29 @@
         app:layout_constraintStart_toStartOf="@+id/inputDays"
         app:layout_constraintTop_toBottomOf="@+id/inputDays"
         app:layout_constraintVertical_bias="0.284" />
+
+    <TextView
+        android:id="@+id/calculation_res"
+        android:layout_width="219dp"
+        android:layout_height="35dp"
+        android:text="TextView"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/inputLessons"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="@+id/inputLessons"
+        app:layout_constraintTop_toBottomOf="@+id/inputLessons"
+        app:layout_constraintVertical_bias="0.169" />
+
+    <Button
+        android:id="@+id/AnotherThread"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Thread"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/inputLessons"
+        app:layout_constraintHorizontal_bias="0.933"
+        app:layout_constraintStart_toStartOf="@+id/calculation_res"
+        app:layout_constraintTop_toBottomOf="@+id/calculation_res"
+        app:layout_constraintVertical_bias="0.333" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
