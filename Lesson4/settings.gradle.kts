@@ -11,6 +11,8 @@ pluginManagement {
         gradlePluginPortal()
     }
 }
+
+
 dependencyResolutionManagement {
     repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
     repositories {
@@ -26,3 +28,5 @@ include(":thread")
 include(":data_thread")
 include(":looper")
 include(":cryptoloader")
+include(":serviceapp")
+include(":workmanager")

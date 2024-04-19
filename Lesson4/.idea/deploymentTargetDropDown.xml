@@ -17,7 +17,13 @@
       <entry key="musicplayer">
         <State />
       </entry>
+      <entry key="serviceapp">
+        <State />
+      </entry>
       <entry key="thread">
+        <State />
+      </entry>
+      <entry key="workmanager">
         <State />
       </entry>
     </value>
