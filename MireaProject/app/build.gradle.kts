@@ -1,10 +1,13 @@
-plugins {
+ plugins {
     alias(libs.plugins.androidApplication)
 }
 
 android {
     namespace = "ru.mirea.andaev.mireaproject"
     compileSdk = 34
+    buildFeatures {
+        viewBinding = true
+    }
 
     defaultConfig {
         applicationId = "ru.mirea.andaev.mireaproject"

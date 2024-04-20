@@ -24,5 +24,9 @@
             android:id="@+id/nav_web"
             android:icon="@mipmap/ic_launcher_round"
             android:title="Web" />
+        <item
+            android:id="@+id/nav_player"
+            android:icon="@drawable/side_nav_bar"
+            android:title="Player" />
     </group>
 </menu>
