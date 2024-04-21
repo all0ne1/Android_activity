@@ -3,6 +3,8 @@ package ru.mirea.andaev.mireaproject;
 import static android.Manifest.permission.FOREGROUND_SERVICE;
 import static android.Manifest.permission.POST_NOTIFICATIONS;
 
+import static androidx.core.content.ContextCompat.startForegroundService;
+
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
@@ -83,13 +85,21 @@ public class PlayerFragment extends Fragment {
             ActivityCompat.requestPermissions(getActivity(), new String[]{FOREGROUND_SERVICE,POST_NOTIFICATIONS},PermissionCode);
         }
         Button playButton = v.findViewById(R.id.playButton);
+        Button pauseButton = v.findViewById(R.id.pauseButton);
         Button stopButton = v.findViewById(R.id.stopPlay);
         playButton.setOnClickListener(view ->{
+            Log.d("PlayerService", "PlayButton");
             Intent serviceIntent = new Intent(getContext(), PlayerService.class);
-            ContextCompat.startForegroundService(getContext(),serviceIntent);
+            serviceIntent.setAction("PLAY");
+            startForegroundService(getContext(),serviceIntent);
         });
         stopButton.setOnClickListener(view ->{
             getActivity().stopService(new Intent(getContext(),PlayerService.class));
+        });
+        pauseButton.setOnClickListener(view ->{
+            Intent pauseIntent = new Intent(getContext(), PlayerService.class);
+            pauseIntent.setAction("PAUSE");
+            getContext().startService(pauseIntent);
         });
         return v;
     }

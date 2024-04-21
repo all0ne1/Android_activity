@@ -1,6 +1,5 @@
 package ru.mirea.andaev.mireaproject;
 
-import android.app.Notification;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
 import android.app.Service;
@@ -16,7 +15,9 @@ import androidx.core.app.NotificationManagerCompat;
 public class PlayerService extends Service {
     static String CHANNEL_ID = "ForegroundServiceChannel";
     MediaPlayer mediaPlayer;
-    static public String TITLE = "MusicTitle";
+    static public String TITLE = "RickRoll";
+    private boolean isPaused = false;
+    private int time;
     @Nullable
     @Override
     public IBinder onBind(Intent intent) {
@@ -26,6 +27,7 @@ public class PlayerService extends Service {
     @Override
     public void onCreate() {
         super.onCreate();
+        Log.d("PlayerService", "MediaPlayer created, ready to start playing");
         NotificationCompat.Builder builder = new NotificationCompat.Builder(this, CHANNEL_ID)
                 .setContentText("Playing....")
                 .setSmallIcon(R.mipmap.ic_launcher)
@@ -42,22 +44,25 @@ public class PlayerService extends Service {
         notificationManager.createNotificationChannel(channel);
         startForeground(1, builder.build());
         mediaPlayer = MediaPlayer.create(this,R.raw.music);
-
-
     }
 
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
-        try {
-            mediaPlayer.start();
-            Log.d(PlayerService.class.getSimpleName(),"Музыка играет");
-        } catch (Exception e) {
-            Log.e(PlayerService.class.getSimpleName(), "Ошибка при проигрывании музыки", e);
+        String action = intent.getAction();
+        if (action.equals("PAUSE")) {
+            pausePlayer();
         }
-        mediaPlayer.setOnCompletionListener(mp ->{
-            stopForeground(true);
-        });
-        return super.onStartCommand(intent, flags, startId);
+        else{
+            try {
+                mediaPlayer.start();
+                Log.d(PlayerService.class.getSimpleName(),"Музыка играет");
+            } catch (Exception e) {
+                Log.e(PlayerService.class.getSimpleName(), "Ошибка при проигрывании музыки", e);
+            }
+            mediaPlayer.setOnCompletionListener(mp -> stopForeground(true));
+
+        }
+        return START_STICKY;
     }
 
     @Override
@@ -67,5 +72,13 @@ public class PlayerService extends Service {
         Log.d(PlayerService.class.getSimpleName(),"Музыка остановилась");
         mediaPlayer = null;
     }
+    public void pausePlayer() {
+        if (mediaPlayer.isPlaying()) {
+            mediaPlayer.pause();
+            isPaused = true;
+            Log.d(PlayerService.class.getSimpleName(), "Музыка поставлена на паузу");
+        }
+    }
+
 
 }
