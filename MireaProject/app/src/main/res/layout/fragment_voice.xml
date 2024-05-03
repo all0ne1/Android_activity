@@ -4,40 +4,32 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.foregroundservice.PlayerFragment">
+    tools:context=".ui.lesson5.audioFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
         <Button
-            android:id="@+id/playButton"
+            android:id="@+id/recordButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Play"
-            app:layout_constraintBottom_toTopOf="@+id/pauseButton"
-            app:layout_constraintEnd_toEndOf="@+id/pauseButton"
-            app:layout_constraintStart_toStartOf="@+id/pauseButton"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <Button
-            android:id="@+id/pauseButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Pause"
+            android:text="Start record"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.404" />
 
         <Button
-            android:id="@+id/stopPlay"
+            android:id="@+id/playRecordedButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Stop"
+            android:layout_marginBottom="208dp"
+            android:text="Start play"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="@+id/pauseButton"
-            app:layout_constraintStart_toStartOf="@+id/pauseButton"
-            app:layout_constraintTop_toBottomOf="@+id/pauseButton" />
+            app:layout_constraintEnd_toEndOf="@+id/recordButton"
+            app:layout_constraintStart_toStartOf="@+id/recordButton"
+            app:layout_constraintTop_toBottomOf="@+id/recordButton" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </FrameLayout>

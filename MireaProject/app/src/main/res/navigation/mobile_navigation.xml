@@ -34,7 +34,22 @@
         tools:layout="@layout/fragment_web_view" />
     <fragment
         android:id="@+id/nav_player"
-        android:name="ru.mirea.andaev.mireaproject.PlayerFragment"
+        android:name="ru.mirea.andaev.mireaproject.ui.foregroundservice.PlayerFragment"
         android:label="fragment_player"
         tools:layout="@layout/fragment_player" />
+    <fragment
+        android:id="@+id/nav_compass"
+        android:name="ru.mirea.andaev.mireaproject.ui.lesson5.compasFragment"
+        android:label="fragment_compas"
+        tools:layout="@layout/fragment_compas" />
+    <fragment
+        android:id="@+id/nav_camera"
+        android:name="ru.mirea.andaev.mireaproject.ui.lesson5.cameraFragment"
+        android:label="fragment_camera"
+        tools:layout="@layout/fragment_camera" />
+    <fragment
+        android:id="@+id/nav_audio"
+        android:name="ru.mirea.andaev.mireaproject.ui.lesson5.audioFragment"
+        android:label="fragment_voice"
+        tools:layout="@layout/fragment_voice" />
 </navigation>

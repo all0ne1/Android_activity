@@ -28,5 +28,20 @@
             android:id="@+id/nav_player"
             android:icon="@drawable/side_nav_bar"
             android:title="Player" />
+        <item
+            android:title="nav_compass"
+            android:id="@+id/nav_compass"
+            android:icon="@drawable/baseline_360_24"
+            />
+        <item
+            android:title="nav_camera"
+            android:id="@+id/nav_camera"
+            android:icon="@drawable/baseline_add_a_photo_24"
+        />
+        <item
+            android:title="nav_audio"
+            android:id="@+id/nav_audio"
+            android:icon="@drawable/baseline_audiotrack_24"
+            />
     </group>
 </menu>

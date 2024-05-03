@@ -1,4 +1,4 @@
-package ru.mirea.andaev.mireaproject;
+package ru.mirea.andaev.mireaproject.ui.foregroundservice;
 
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
@@ -11,6 +11,8 @@ import android.util.Log;
 import androidx.annotation.Nullable;
 import androidx.core.app.NotificationCompat;
 import androidx.core.app.NotificationManagerCompat;
+
+import ru.mirea.andaev.mireaproject.R;
 
 public class PlayerService extends Service {
     static String CHANNEL_ID = "ForegroundServiceChannel";
@@ -45,6 +47,7 @@ public class PlayerService extends Service {
         startForeground(1, builder.build());
         mediaPlayer = MediaPlayer.create(this,R.raw.music);
     }
+
 
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {

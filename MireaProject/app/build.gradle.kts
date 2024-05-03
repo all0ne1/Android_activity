@@ -5,6 +5,7 @@
 android {
     namespace = "ru.mirea.andaev.mireaproject"
     compileSdk = 34
+
     buildFeatures {
         viewBinding = true
     }

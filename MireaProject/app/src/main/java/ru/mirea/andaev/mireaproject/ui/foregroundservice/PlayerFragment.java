@@ -1,4 +1,4 @@
-package ru.mirea.andaev.mireaproject;
+package ru.mirea.andaev.mireaproject.ui.foregroundservice;
 
 import static android.Manifest.permission.FOREGROUND_SERVICE;
 import static android.Manifest.permission.POST_NOTIFICATIONS;
@@ -19,6 +19,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
+import ru.mirea.andaev.mireaproject.MainActivity;
+import ru.mirea.andaev.mireaproject.R;
 import ru.mirea.andaev.mireaproject.databinding.ActivityMainBinding;
 
 /**
