@@ -10,10 +10,10 @@
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE_MEDIA_PLAYBACK" />
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
     <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
-    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
-    <uses-permission android:name="android.permission.CAMERA"/>
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
-    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
 
     <application
         android:allowBackup="true"
@@ -26,29 +26,34 @@
         android:theme="@style/Theme.MireaProject"
         tools:targetApi="31">
         <activity
-            android:name=".MainActivity"
+            android:name=".ui.lesson7.LoginActivity"
             android:exported="true"
             android:label="@string/app_name"
             android:theme="@style/Theme.MireaProject.NoActionBar">
-
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.MireaProject.NoActionBar">
+        </activity>
+
         <provider
-            android:authorities="ru.mirea.andaev.mireaproject.fileprovider"
             android:name="androidx.core.content.FileProvider"
+            android:authorities="ru.mirea.andaev.mireaproject.fileprovider"
             android:exported="false"
             android:grantUriPermissions="true">
             <meta-data
                 android:name="android.support.FILE_PROVIDER_PATHS"
-                android:resource="@xml/paths"/>
+                android:resource="@xml/paths" />
         </provider>
-        <service android:name=".ui.foregroundservice.PlayerService"
-            android:foregroundServiceType="mediaPlayback"
-            android:exported="false">
-        </service>
+        <service
+            android:name=".ui.foregroundservice.PlayerService"
+            android:exported="false"
+            android:foregroundServiceType="mediaPlayback"></service>
     </application>
 
 </manifest>
