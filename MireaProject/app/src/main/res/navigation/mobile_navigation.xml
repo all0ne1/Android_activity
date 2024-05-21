@@ -62,4 +62,14 @@
         android:name="ru.mirea.andaev.mireaproject.ui.lesson6.profilePhotoFragment"
         android:label="fragment_profile_photo"
         tools:layout="@layout/fragment_profile_photo" />
+    <fragment
+        android:id="@+id/nav_map"
+        android:name="ru.mirea.andaev.mireaproject.ui.lesson8.mapFragment"
+        android:label="fragment_map"
+        tools:layout="@layout/fragment_map" />
+    <fragment
+        android:id="@+id/nav_api"
+        android:name="ru.mirea.andaev.mireaproject.ui.lesson7.BoredapiFragment"
+        android:label="fragment_boredapi"
+        tools:layout="@layout/fragment_boredapi" />
 </navigation>

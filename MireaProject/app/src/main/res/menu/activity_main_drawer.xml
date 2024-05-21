@@ -51,5 +51,13 @@
             android:id="@+id/nav_profilePhoto"
             android:icon="@drawable/baseline_camera_front_24"
             android:title="nav_profilePhoto" />
+        <item
+            android:id="@+id/nav_api"
+            android:icon="@drawable/baseline_bed_24"
+            android:title="nav_api" />
+        <item
+            android:id="@+id/nav_map"
+            android:icon="@drawable/baseline_directions_bus_24"
+            android:title="nav_map" />
     </group>
 </menu>
